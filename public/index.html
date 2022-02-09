@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!</title>
+</head>
+
+<style>
+
+    #container {
+       height:100vh;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+
+    #map {
+        height: 80vh;
+        width: 80vw;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+</style>
+
+<body>
+    <h1>Adopt a pet!</h1>
+    <div id="shelter" class="search">
+        <h2>Look for a shelter</h2> within <input class="input" id="distance" placeholder="enter an number"/> miles of my location.
+        <input class="shelter" type="button" id="submitDistance" value="Search" />
+    </div>
+    
+    <div id="container">
+        <h3 id="info"></h3>
+        <div id="map"></div>
+    </div>
+    <script src="javascripts/script.js"></script>
+    <script async
+        src= "https://maps.googleapis.com/maps/api/js?key=process.env.API_KEY&callback=initGoogle">
+    </script>
+</body>
+</html>
+
+<!-- adding multiple libraries to Google Maps API: https://developers.google.com/maps/documentation/javascript/libraries -->
