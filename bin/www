@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('jsr1130-express-app:server');
+var debug = require('debug')('petfinder-express-app:server');
 var http = require('http');
 
 /**
